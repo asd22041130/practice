@@ -1,0 +1,20 @@
+# 快速執行 git 指令
+alias g='git'                          # 將 g 當作 git 的縮寫，例如 g status 就等於 git status
+
+# 常用的 Git 狀態操作
+alias gst='git status'                # 查看當前 Git 狀態
+alias gaa='git add .'                 # 將所有檔案加入暫存區
+alias gcmsg='git commit -m'           # 快速 commit 並加上訊息
+alias gp='git push'                   # 將提交推送到遠端
+alias gl='git pull'                   # 從遠端拉取最新版本
+
+# 分支管理
+alias gb='git branch'                 # 顯示本地分支列表
+alias gba='git branch -a'             # 顯示本地與遠端所有分支
+alias gco='git checkout'              # 切換分支
+alias gcb='git checkout -b'           # 建立新分支並切換過去
+alias ggsup='git branch --set-upstream-to=origin/$(git symbolic-ref --short HEAD)'  # 將目前分支設為追蹤遠端分支
+
+# 合併與紀錄
+alias gm='git merge'                  # 合併分支
+alias glog='git log --oneline --graph --all'   # 查看 Git commit 歷史圖形化紀錄（非常好用！）
